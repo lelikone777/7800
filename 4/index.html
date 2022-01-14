@@ -15,7 +15,8 @@
             --btn-fontSize: 50px;
         }
         :root {
-            --btn-fontSize: 7.8vw;
+            --btn-fontSize: 10vw;
+            /*--btn-fontSize: 7.8vw;*/
         }
         * {
             padding: 0;
@@ -95,19 +96,6 @@
             align-items: center;
         }
 
-
-
-        /*margin: 0 auto;*/
-        /*display: flex;*/
-        /*align-items: center;*/
-        /*justify-content: center;*/
-        /*font-size: var(--btn-fontSize);*/
-        /*font-weight: bold;*/
-        /*background-color: #ff0075;*/
-        /*border-radius: 50px;*/
-        /*color: #fff;*/
-        /*text-decoration: none;*/
-
         .button {
             display: flex;
             align-items: center;
@@ -123,6 +111,7 @@
             width: 90%;
             font-size: var(--btn-fontSize);
             height: calc(var(--btn-fontSize) * 2.1);
+            text-decoration: none;
         }
 
         .price, .cancel {
@@ -155,10 +144,12 @@
         }
         .footer__text {
             font-family: 'Arial', sans-serif;
-            font-size: 20px;
+            /*font-size: 20px;*/
             /*line-height: 22px;*/
             color: #808080;
             text-align: center;
+            font-size: 3vw;
+            line-height: 3.1vw;
         }
         .footer__text-link {
             text-decoration: underline;
@@ -173,7 +164,8 @@
 
         @media (orientation: landscape) {
             :root {
-                --btn-fontSize: 7.8vh;
+                --btn-fontSize: 10vh;
+                /*--btn-fontSize: 7.8vh;*/
             }
             .price, .cancel {
                 font-size: 4vh;
@@ -282,7 +274,7 @@
                 height: 30px;
             }
             .footer__text {
-                font-size: 13px;
+                /*font-size: 13px;*/
             }
         }
 
@@ -337,7 +329,7 @@
                 width: 33%;
             }
             .footer__text {
-                font-size: 11px;
+                /*font-size: 11px;*/
             }
         }
         @media (max-width: 539px)
@@ -536,9 +528,11 @@
     <div class="button__group">
 
             <div class="button__box">
-                <div class="button">Продолжить</div>
+
+                <a id="agree" href="#" onclick="document.getElementById('ButtonSubmit').click();" class="button">Продолжить</a>
                 <div class="price">30 руб. / день</div>
-                <div class="cancel">Отмена</div>
+                <a id="cancel" href="#" class="cancel" onclick="javascript:frm.ButtonOK.setAttribute('name', 'ButtonCancel');javascript:frm.ButtonCancel.value = 'Cancel';javascript:frm.resultForm.value = 'OK';javascript:frm.submit();" class="cancel">Отмена</a>
+
             </div>
 
     </div>
@@ -547,7 +541,7 @@
 <div class="footer">
     <div class="container">
         <div class="footer__text">
-            Нажатием на кнопку «Продолжить» вы осуществляете заказ услуги «Доступ к «Pocket Kiosk» на условиях <a class="footer__text-link" href="#">пользовательского соглашения.</a>  Провайдер ООО «ТД МЕДИА». Стоимость: 30 руб./ сутки (с НДС). Оплата с контентного лицевого счета, а при его отсутствии с основного лицевого счета Абонента.
+            Нажатием на кнопку «Продолжить» вы осуществляете заказ услуги «Доступ к «Pocket Kiosk» на условиях <a class="footer__text-link" href="https://tvclub.online/rules/tele2.php">пользовательского соглашения.</a>  Провайдер ООО «ТД МЕДИА». Стоимость: 30 руб./ сутки (с НДС). Оплата с контентного лицевого счета, а при его отсутствии с основного лицевого счета Абонента.
         </div>
     </div>
 </div>

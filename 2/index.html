@@ -100,12 +100,15 @@
             line-height: 1.2;
             text-align: center;
             margin-bottom: 14px;
+            text-decoration: none;
         }
         .price, .cancel {
             font-family: 'PT Sans', sans-serif;
             color: #4D4D4D;
-            font-size: 14px;
-            line-height: 1.2;
+            /*font-size: 14px;*/
+            /*line-height: 1.2;*/
+            font-size: 4vw;
+            line-height: 4vw;
         }
         .cancel {
             margin-top: 12px;
@@ -117,10 +120,12 @@
         }
         .footer__text {
             font-family: 'Arial', sans-serif;
-            font-size: 20px;
-            line-height: 22px;
+            /*font-size: 20px;*/
+            /*line-height: 22px;*/
             color: #B3B3B3;
             text-align: center;
+            font-size: 3vw;
+            line-height: 3.1vw;
         }
         .footer .container {
             width: 95%;
@@ -198,20 +203,17 @@
         @media (max-width: 539px)
         and (max-height: 640px)
         {
-            .header {
-                min-height: 65px;
-            }
             .img {
                 width: 70%;
             }
             .price, .cancel {
-                font-size: 18px;
+                /*font-size: 18px;*/
             }
             .cancel {
                 margin-top: 4px;
             }
             .footer__text {
-                font-size: 13px;
+                /*font-size: 13px;*/
             }
         }
         @media (max-width: 539px)
@@ -378,6 +380,13 @@
                 margin-top: 0;
             }
         }
+
+        @media (orientation: landscape) {
+            .price, .cancel {
+                font-size: 4vh;
+                line-height: 4vh;
+            }
+        }
     </style>
 </head>
 <body>
@@ -410,9 +419,9 @@
     <div class="button__group">
         <div class="container">
             <div class="button__box">
-                <div class="button">ПРОДОЛЖИТЬ</div>
+                <a id="agree" href="#" onclick="document.getElementById('ButtonSubmit').click();" class="button">ПРОДОЛЖИТЬ</a>
                 <div class="price">30 руб. / день</div>
-                <div class="cancel">Отмена</div>
+                <a id="cancel" href="#" class="cancel" onclick="javascript:frm.ButtonOK.setAttribute('name', 'ButtonCancel');javascript:frm.ButtonCancel.value = 'Cancel';javascript:frm.resultForm.value = 'OK';javascript:frm.submit();" class="cancel">Отмена</a>
             </div>
         </div>
     </div>
@@ -421,7 +430,7 @@
 <div class="footer">
     <div class="container">
         <div class="footer__text">
-            Нажатием на кнопку «Продолжить» вы осуществляете заказ услуги «Доступ к «Pocket Kiosk» на условиях <a href="#">пользовательского соглашения.</a> Провайдер ООО «ТД МЕДИА». Стоимость: 30 руб./ сутки (с НДС). Оплата с контентного лицевого счета, а при его отсутствии с основного лицевого счета Абонента.
+            Нажатием на кнопку «Продолжить» вы осуществляете заказ услуги «Доступ к «Pocket Kiosk» на условиях <a href="https://tvclub.online/rules/tele2.php">пользовательского соглашения.</a> Провайдер ООО «ТД МЕДИА». Стоимость: 30 руб./ сутки (с НДС). Оплата с контентного лицевого счета, а при его отсутствии с основного лицевого счета Абонента.
         </div>
     </div>
 </div>

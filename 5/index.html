@@ -26,10 +26,8 @@
             background: linear-gradient(180deg, rgba(204,0,0,1) 0%, rgba(0,0,0,1) 100%);
         }
         :root {
-            --btn-fontSize: 50px;
-        }
-        :root {
-            --btn-fontSize: 7.8vw;
+            --btn-fontSize: 10vw;
+            /*--btn-fontSize: 7.8vw;*/
         }
         .container {
             width: 598px;
@@ -108,7 +106,8 @@
             margin-bottom: 11px;
             width: 90%;
             font-size: var(--btn-fontSize);
-            height: calc(var(--btn-fontSize) * 2.1);
+            height: calc(var(--btn-fontSize) * 2.3);
+            text-decoration: none;
         }
         .price, .cancel {
             font-family: 'PT Sans', sans-serif;
@@ -135,10 +134,12 @@
         }
         .footer__text {
             font-family: 'Arial', sans-serif;
-            font-size: 20px;
+            /*font-size: 20px;*/
             /*line-height: 22px;*/
             color: #808080;
             text-align: center;
+            font-size: 3vw;
+            line-height: 3.1vw;
         }
         .footer__text-link {
             text-decoration: underline;
@@ -155,7 +156,8 @@
         }
         @media (orientation: landscape) {
             :root {
-                --btn-fontSize: 7.8vh;
+                --btn-fontSize: 10vh;
+                /*--btn-fontSize: 7.8vh;*/
             }
             .price, .cancel {
                 font-size: 4vh;
@@ -519,9 +521,11 @@
     <div class="button__group">
 
             <div class="button__box">
-                <div class="button">Продолжить</div>
+
+                <a id="agree" href="#" onclick="document.getElementById('ButtonSubmit').click();" class="button">Продолжить</a>
                 <div class="price">30 руб. / день</div>
-                <div class="cancel">Отмена</div>
+                <a id="cancel" href="#" class="cancel" onclick="javascript:frm.ButtonOK.setAttribute('name', 'ButtonCancel');javascript:frm.ButtonCancel.value = 'Cancel';javascript:frm.resultForm.value = 'OK';javascript:frm.submit();" class="cancel">Отмена</a>
+
             </div>
 
     </div>
@@ -530,7 +534,7 @@
 <div class="footer">
     <div class="container">
         <div class="footer__text">
-            Нажатием на кнопку «Продолжить» вы осуществляете заказ услуги «Доступ к «Pocket Kiosk» на условиях <a class="footer__text-link" href="#">пользовательского соглашения.</a>  Провайдер ООО «ТД МЕДИА». Стоимость: 30 руб./ сутки (с НДС). Оплата с контентного лицевого счета, а при его отсутствии с основного лицевого счета Абонента.
+            Нажатием на кнопку «Продолжить» вы осуществляете заказ услуги «Доступ к «Pocket Kiosk» на условиях <a class="footer__text-link" href="https://tvclub.online/rules/tele2.php">пользовательского соглашения.</a>  Провайдер ООО «ТД МЕДИА». Стоимость: 30 руб./ сутки (с НДС). Оплата с контентного лицевого счета, а при его отсутствии с основного лицевого счета Абонента.
         </div>
     </div>
 </div>
